@@ -1,15 +1,63 @@
+:root {
+--primary-bg-color: 
+}
+
+body {
+    background-image: url(../img/brown-texture.jpg);
+    background-repeat: repeat;
+    background-size: 200px;
+}
+
 #wrapper {
     height:100vh;
     width:100vw;
 }
 
 main { 
+    height: ;
+    background-color: gray;
     display: grid;
+    grid-template-areas: 
+    "im rb de"
+    "im rb de";
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.menu {
+    background-color: blue;
+    height: 100vh;
+    width: 60vw;
+    position: fixed;
+    left: -60vw;
+    transition: left 0.3s;
+    z-index: 10;
 }
 
 .image {
     background-color: aqua;
+    height: 1fr;
     /* height: 10px;
     width: 100px; */
+    grid-area: im;
 }
+
+.rating_bar {
+    background-color: aquamarine;
+    grid-area: rb;
+}
+
+.description {
+    background-color: blueviolet;
+    grid-area: de;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 500px) {
+
+
+}
+
+/* DESKTOP */
+
