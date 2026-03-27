@@ -6,22 +6,34 @@ body {
     background-image: url(../img/brown-texture.jpg);
     background-repeat: repeat;
     background-size: 200px;
+    margin: 0;
 }
 
 #wrapper {
     height:100vh;
     width:100vw;
+    margin: 0;
+}
+
+header {
+    height: 20vh;
+}
+
+h1 {
+    margin: 0;
 }
 
 main { 
-    height: ;
+    height: 80vh;
     background-color: gray;
     display: grid;
-    grid-template-areas: 
-    "im rb de"
-    "im rb de";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+article {
+    display: flex;
+    gap: 10px;
+    align-content: space-between;
 }
 
 .menu {
@@ -35,6 +47,7 @@ main {
 }
 
 .image {
+    width: 45%;
     background-color: aqua;
     height: 1fr;
     /* height: 10px;
@@ -43,11 +56,20 @@ main {
 }
 
 .rating_bar {
+    width: 10%;
     background-color: aquamarine;
     grid-area: rb;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    transform: rotate(270deg);
+    background: url()
 }
 
 .description {
+    width: 45%;
     background-color: blueviolet;
     grid-area: de;
 }
