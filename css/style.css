@@ -46,6 +46,31 @@ article {
     z-index: 10;
 }
 
+.menu-button {
+    background-color: chocolate;
+    cursor: pointer;
+    display: inline;
+}
+
+.show {
+    left: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
+}
+
 .image {
     width: 45%;
     background-color: aqua;
