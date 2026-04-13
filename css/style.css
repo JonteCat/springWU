@@ -6,17 +6,20 @@ body {
     background-image: url(../img/brown-texture.jpg);
     background-repeat: repeat;
     background-size: 200px;
+    
     margin: 0;
 }
 
 #wrapper {
-    height:100vh;
-    width:100vw;
     margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
 }
 
 header {
-    height: 20vh;
+    height: 1fr;
 }
 
 h1 {
@@ -97,6 +100,10 @@ article {
     width: 45%;
     background-color: blueviolet;
     grid-area: de;
+}
+
+footer {
+    background-color: brown;
 }
 
 /* MOBILE */
