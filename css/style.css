@@ -20,7 +20,11 @@ body {
 }
 
 #home-wrapper {
-    grid-template-rows: 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+#info-wrapper {
+
 }
 
 header {
@@ -46,23 +50,38 @@ article {
 }
 
 .menu {
-    background-color: blue;
+    /* background-color: blue; */
+    background-image: url(../img/brown-texture.jpg);
+    background-repeat: repeat;
+    background-size: 200px;
+    border-left: solid black 3px;
     height: 100vh;
-    width: 60vw;
+    width: 57vw;
     position: fixed;
-    left: -60vw;
-    transition: left 0.3s;
+    right: -60vw;
+    transition: right 0.3s;
     z-index: 10;
 }
 
 .menu-button {
     background-color: chocolate;
     cursor: pointer;
-    display: inline;
+    display: flex;
+    justify-self: flex-end;
+    width: max-content;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link:hover {
+    color:coral;
 }
 
 .show {
-    left: 0;
+    right: 0;
 }
 
 .fade-layer{
@@ -87,26 +106,57 @@ article {
     height: 1fr;
     /* height: 10px;
     width: 100px; */
-    grid-area: im;
+    /* grid-area: im; */
+}
+
+#more-info-picture {
+    justify-self: center;
+    width: 90vw;
+    height: auto;
 }
 
 .rating_bar {
     width: 10%;
     background-color: aquamarine;
-    grid-area: rb;
-    display: flex;
+/*     grid-area: rb;
+ */    display: flex;
     justify-content: center;
 }
 
 .slider {
+    height: 20%;
+    width: 1fr;
+    top: 40%;
+    position: relative;
+    /* appearance: none; */
     transform: rotate(270deg);
-    background: url()
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../img/ic--twotone-shield.png");
+    background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border: 0;
+}
+
+#horisontal-slider {
+    transform: rotate(0deg)
 }
 
 .description {
     width: 45%;
     background-color: blueviolet;
-    grid-area: de;
+    /* grid-area: de; */
+}
+
+#info-desc {
+    /* diffrent width */
 }
 
 footer {

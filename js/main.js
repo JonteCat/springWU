@@ -11,3 +11,5 @@ function showMenu() {
     
     layer.classList.toggle("visible");
 };
+
+/* let slider_value = document. */
