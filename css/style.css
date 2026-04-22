@@ -27,6 +27,19 @@ body {
 
 }
 
+#leaderboard-wrapper {
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid black
+}
+
 header {
     height: 1fr;
 }
@@ -41,6 +54,12 @@ main {
     display: grid;
     gap: var(--space);
     padding: var(--space);
+}
+
+#info-main {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
 }
 
 article {
@@ -110,12 +129,18 @@ article {
 }
 
 #more-info-picture {
-    justify-self: center;
+    align-self: center;
     width: 90vw;
     height: auto;
 }
 
-.rating_bar {
+#info-container { 
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container {
     width: 10%;
     background-color: aquamarine;
 /*     grid-area: rb;
@@ -123,12 +148,19 @@ article {
     justify-content: center;
 }
 
+#info-slider-container {
+    width: auto;
+    order: 3;
+    align-self: flex-end;
+    justify-content: right;
+}
+
 .slider {
     height: 20%;
     width: 1fr;
     top: 40%;
     position: relative;
-    /* appearance: none; */
+    appearance: none;
     transform: rotate(270deg);
 }
 
@@ -137,8 +169,8 @@ article {
     appearance: none;
     background-image: url("../img/ic--twotone-shield.png");
     background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
     cursor: pointer;
     width: 25px;
     height: 25px;
@@ -146,7 +178,7 @@ article {
 }
 
 #horisontal-slider {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
 }
 
 .description {
