@@ -1,39 +1,60 @@
+@font-face {
+    font-family: "Jacquard24";
+    src: url(../misc/Jacquard_24/Jacquard24-Regular.ttf);
+}
+
 :root {
 --primary-bg-color: ;
 --space: 10px;
+--background-texture: url("../misc/6902855122243-architecture_stones-walls_damaged-walls_damaged-wall-stone-texture-seamless-08694/59_damaged\ wall\ stone\ texture-seamless.jpg");
+--background-texture-size: 400px;
+--text-color: #8B0B1C;
+--text-border: 1px 1px white, -1px -1px white;
 }
 
 body {
-    background-image: url(../img/brown-texture.jpg);
+    background-image: var(--background-texture);
     background-repeat: repeat;
-    background-size: 200px;
-    
+    background-size: var(--background-texture-size);
     margin: 0;
+}
+
+h1 {
+    font-family: Jacquard24;
+    color: var(--text-color);
+    text-shadow: var(--text-border);
+    /* -webkit-text-stroke: 2px white; */
+    
 }
 
 .wrapper {
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    width: 100%;
     display: grid;
-    
 }
 
 #home-wrapper {
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 10vh 4fr 1fr;
 }
 
 #info-wrapper {
-
+    grid-template-rows: 10vh 1fr;
 }
 
 #leaderboard-wrapper {
-
+    grid-template-rows: 10vh 1fr;
 }
 
-table {
+#top {
+    height: 10vh;
+}
+
+#leaderboard {
     border-collapse: collapse;
-    width: 100%;
+    width: 95%;
+    margin: var(--space);
+    justify-self: center;
 }
 
 td, th {
@@ -49,7 +70,6 @@ h1 {
 }
 
 main { 
-    height: 80vh;
     /* background-color: gray; */
     display: grid;
     gap: var(--space);
@@ -59,7 +79,7 @@ main {
 #info-main {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    justify-content: space-between;
 }
 
 article {
@@ -70,9 +90,9 @@ article {
 
 .menu {
     /* background-color: blue; */
-    background-image: url(../img/brown-texture.jpg);
+    background-image: var(--background-texture);
     background-repeat: repeat;
-    background-size: 200px;
+    background-size: var(--background-texture-size);
     border-left: solid black 3px;
     height: 100vh;
     width: 57vw;
@@ -80,23 +100,33 @@ article {
     right: -60vw;
     transition: right 0.3s;
     z-index: 10;
+    color: var(--text-color);
+    font-family: Jacquard24;
+    list-style: none;
 }
 
 .menu-button {
-    background-color: chocolate;
+    background-image: url("..img\menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
+    size: 24px;
     cursor: pointer;
     display: flex;
     justify-self: flex-end;
     width: max-content;
 }
 
+ul {
+    list-style: none;
+}
+
 .menu-link {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
+    font-size: 2rem;
+    text-shadow: var(--text-border);
 }
 
 .menu-link:hover {
-    color:coral;
+    color: green;
 }
 
 .show {
@@ -192,7 +222,8 @@ article {
 }
 
 footer {
-    background-color: brown;
+    /* background-color: #151716; */
+    background-color: rgba(0,0,0,0.6)
 }
 
 /* MOBILE */
